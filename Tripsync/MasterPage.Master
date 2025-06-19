@@ -16,7 +16,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
     <style>
         :root {
-             --primary-color: #1565c0;      /* Blue for header/footer */
+            --primary-color: #1565c0;      /* Blue for header/footer */
             --primary-hover: #0d47a1;      /* Darker blue for hover */
             --text-light: #ffffff;
             --text-dark: #333333;
@@ -238,31 +238,28 @@
                             </asp:HyperLink>
                         </li>
                             <!-- Navigation Bar Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBooking" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-ticket-alt me-1"></i>Find Rides
+                        <li id="liFindRides" runat="server" class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="findRidesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Find Rides
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownBooking">
+                            <ul class="dropdown-menu" aria-labelledby="findRidesDropdown">
                                 <li>
-                                    <asp:HyperLink ID="hlBuyTickets" runat="server" NavigateUrl="~/BuyTickets2.aspx"
-                                        CssClass="dropdown-item">
-                                        <i class="fas fa-shopping-cart me-2"></i>Find Rides
-                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="hlFindRides" runat="server" NavigateUrl="~/FindRides.aspx" CssClass="dropdown-item">Find Rides</asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink ID="hlMyBookings" runat="server" NavigateUrl="~/MyBookings.aspx"
-                                        CssClass="dropdown-item">
-                                        <i class="fas fa-list-alt me-2"></i>My Purchases
-                                    </asp:HyperLink>
-                                </li>
-                                <li>
-                                    <asp:HyperLink ID="hlCancelReservation" runat="server"
-                                        NavigateUrl="~/CancelReservation.aspx" CssClass="dropdown-item">
-                                        <i class="fas fa-ban me-2"></i>Cancel Purchases
-                                    </asp:HyperLink>
+                                    <asp:HyperLink ID="hlMyBookings" runat="server" NavigateUrl="~/MyBookings.aspx" CssClass="dropdown-item">My Bookings</asp:HyperLink>
                                 </li>
                             </ul>
+                        </li>
+                        <li id="liOffer" runat="server" visible="false" class="nav-item">
+                            <asp:HyperLink ID="hlOffer" runat="server" NavigateUrl="~/Offer.aspx" CssClass="nav-link">
+                                <i class="fas fa-tachometer-alt me-1"></i>Offer a Ride
+                            </asp:HyperLink>
+                        </li>
+                        <li class="nav-item">
+                            <asp:HyperLink ID="hlUniversities" runat="server" NavigateUrl="~/universities.aspx" CssClass="nav-link">
+                                <i class="fas fa-university me-1"></i>Universities
+                            </asp:HyperLink>
                         </li>
                         <li class="nav-item">
                             <asp:HyperLink ID="hlContact" runat="server" NavigateUrl="~/contact us.aspx"
@@ -436,13 +433,8 @@
                             <ul class="navbar-nav mx-auto">
                               
                                 <li class="nav-item">
-                                    <a class="nav-link" href="BuyTickets2.aspx">
+                                    <a class="nav-link" href="FindRides.aspx">
                                         <i class="fas fa-shopping-cart me-2"></i>Find Rides
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="CancelReservation.aspx">
-                                        <i class="fas fa-ban me-2"></i>Cancel Reservation
                                     </a>
                                 </li>
                             </ul>

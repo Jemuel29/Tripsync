@@ -11,70 +11,61 @@ namespace Tripsync
 {
 
 
-    public partial class Dashboard
+    public partial class universities
     {
 
         /// <summary>
-        /// lblDashboardUsername control.
+        /// btnFindRides1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDashboardUsername;
+        protected global::System.Web.UI.WebControls.Button btnFindRides1;
 
         /// <summary>
-        /// lblDashboardRole control.
+        /// btnFindRides2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDashboardRole;
+        protected global::System.Web.UI.WebControls.Button btnFindRides2;
 
         /// <summary>
-        /// pnlPassenger control.
+        /// btnFindRides3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlPassenger;
+        protected global::System.Web.UI.WebControls.Button btnFindRides3;
 
         /// <summary>
-        /// rptMyBookings control.
+        /// btnFindRides4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptMyBookings;
+        protected global::System.Web.UI.WebControls.Button btnFindRides4;
 
         /// <summary>
-        /// pnlDriver control.
+        /// btnFindRides5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlDriver;
+        protected global::System.Web.UI.WebControls.Button btnFindRides5;
 
         /// <summary>
-        /// rptPendingBookings control.
+        /// btnFindRides6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptPendingBookings;
-
-        /// <summary>
-        /// lblDriverMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDriverMessage;
+        protected global::System.Web.UI.WebControls.Button btnFindRides6;
     }
 }

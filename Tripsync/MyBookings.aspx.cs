@@ -1,57 +1,72 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
 using System.Data.OleDb;
-using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Tripsync
 {
-    public partial class MyBookings : Page
+    public partial class MyBookings : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {
-                if (Session["Username"] == null)
-                {
-                    Response.Write("<script>alert('You must be logged in to view your bookings.'); window.location='signup.aspx';</script>");
-                    return;
-                }
-                
                 LoadBookings();
-            }
         }
 
         private void LoadBookings()
         {
-            string username = Session["Username"].ToString();
-            string connString = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" + Server.MapPath("~/App_Data/Tripsync.mdb");
-            string query = "SELECT MovieTitle, Seats, BookingDate, ShowTime, TotalPrice, ConfirmationNumber FROM TicketBookings WHERE Username = ? ORDER BY BookingDate DESC";
+            string userId = Session["UserId"]?.ToString();
+            if (string.IsNullOrEmpty(userId))
+                return;
 
-            using (OleDbConnection conn = new OleDbConnection(connString))
+            string connStr = ConfigurationManager.ConnectionStrings["TripsyncConnection"].ConnectionString;
+            string query = @"SELECT b.BookingId, b.BookingDate, b.Status, b.RideId,
+                            r.PickupLocation, r.Destination, r.DepartureDate, r.DepartureTime
+                     FROM Bookings b
+                     INNER JOIN Rider r ON b.RideId = r.RideId
+                     WHERE b.UserId = ?";
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            using (OleDbCommand cmd = new OleDbCommand(query, conn))
             {
-                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                cmd.Parameters.AddWithValue("UserId", userId);
+                using (OleDbDataAdapter da = new OleDbDataAdapter(cmd))
                 {
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    conn.Open();
-
-                    using (OleDbDataAdapter adapter = new OleDbDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-
-                        gvBookings.DataSource = dt;
-                        gvBookings.DataBind();
-
-                       
-                        lblNoBookings.Visible = (dt.Rows.Count == 0);
-                    }
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    rptBookings.DataSource = dt;
+                    rptBookings.DataBind();
                 }
             }
         }
 
-        protected void btnReturnHome_Click(object sender, EventArgs e)
+        protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Home.aspx");
+            try
+            {
+                Button btn = (Button)sender;
+                string bookingId = btn.CommandArgument;
+
+                string connStr = ConfigurationManager.ConnectionStrings["TripsyncConnection"].ConnectionString;
+                string deleteQuery = "DELETE FROM Bookings WHERE BookingId = ?";
+                using (OleDbConnection conn = new OleDbConnection(connStr))
+                using (OleDbCommand cmd = new OleDbCommand(deleteQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("BookingId", bookingId);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+
+                lblMessage.Text = "Booking cancelled successfully.";
+                lblMessage.CssClass = "text-success";
+            }
+            catch
+            {
+                lblMessage.Text = "An error occurred. Please try again.";
+                lblMessage.CssClass = "text-danger";
+            }
+
+            LoadBookings();
         }
     }
 }

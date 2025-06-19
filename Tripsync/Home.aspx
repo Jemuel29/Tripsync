@@ -115,7 +115,7 @@
                 <div class="step-card">
                     <div class="step-icon">🤝</div>
                     <h3>3. Connect & Save</h3>
-                    <p>CoorCoordinate through our secure messaging system, share costs, and track your ride in real-time.</p>
+                    <p>Coordinate through our secure messaging system, share costs, and track your ride in real-time.</p>
                 </div>
             </div>
         </section>

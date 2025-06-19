@@ -11,16 +11,16 @@ namespace Tripsync
 {
 
 
-    public partial class BuyTickets
+    public partial class Driverdashboard
     {
 
         /// <summary>
-        /// rptMovies control.
+        /// gvBookings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptMovies;
+        protected global::System.Web.UI.WebControls.GridView gvBookings;
     }
 }

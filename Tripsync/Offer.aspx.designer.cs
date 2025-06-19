@@ -11,70 +11,88 @@ namespace Tripsync
 {
 
 
-    public partial class Dashboard
+    public partial class Offer
     {
 
         /// <summary>
-        /// lblDashboardUsername control.
+        /// txtPickup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDashboardUsername;
+        protected global::System.Web.UI.WebControls.TextBox txtPickup;
 
         /// <summary>
-        /// lblDashboardRole control.
+        /// txtDestination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDashboardRole;
+        protected global::System.Web.UI.WebControls.TextBox txtDestination;
 
         /// <summary>
-        /// pnlPassenger control.
+        /// txtDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlPassenger;
+        protected global::System.Web.UI.WebControls.TextBox txtDate;
 
         /// <summary>
-        /// rptMyBookings control.
+        /// txtTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptMyBookings;
+        protected global::System.Web.UI.WebControls.TextBox txtTime;
 
         /// <summary>
-        /// pnlDriver control.
+        /// rblVehicleType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlDriver;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblVehicleType;
 
         /// <summary>
-        /// rptPendingBookings control.
+        /// txtSeats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptPendingBookings;
+        protected global::System.Web.UI.WebControls.TextBox txtSeats;
 
         /// <summary>
-        /// lblDriverMessage control.
+        /// txtPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDriverMessage;
+        protected global::System.Web.UI.WebControls.TextBox txtPrice;
+
+        /// <summary>
+        /// txtNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNotes;
+
+        /// <summary>
+        /// btnPostRide control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPostRide;
     }
 }

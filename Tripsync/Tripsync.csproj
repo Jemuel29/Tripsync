@@ -69,45 +69,30 @@
   <ItemGroup>
     <Content Include="about us.aspx" />
     <Content Include="App_Data\Tripsync.mdb" />
-    <Content Include="BookingConfirmation.aspx" />
-    <Content Include="BuyTickets.aspx" />
-    <Content Include="BuyTickets2.aspx" />
-    <Content Include="CancelReservation.aspx" />
-    <Content Include="Checkout.aspx" />
+    <Content Include="FindRides.aspx" />
     <Content Include="Contact us.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="MyBookings.aspx" />
-    <Content Include="Picture\1917.png" />
+    <Content Include="Offer.aspx" />
     <Content Include="Picture\carpool.png" />
-    <Content Include="Picture\chapman.png" />
-    <Content Include="Picture\damson.png" />
     <Content Include="Picture\De La Salle University %28DLSU%29 logo.png" />
-    <Content Include="Picture\f1.png" />
+    <Content Include="Picture\dlsu.png" />
     <Content Include="Picture\FEU Alabang logo.png" />
-    <Content Include="Picture\gcash-logo.png" />
-    <Content Include="Picture\george.png" />
-    <Content Include="Picture\herobanner.png" />
-    <Content Include="Picture\joaquin.png" />
-    <Content Include="Picture\joker.png" />
-    <Content Include="Picture\lady.png" />
-    <Content Include="Picture\logo.png" />
+    <Content Include="Picture\feu.png" />
     <Content Include="Picture\Mapúa Malayan Colleges Laguna %28MMCL%29 logo.png" />
-    <Content Include="Picture\mastercard-logo.png" />
+    <Content Include="Picture\mmcl.png" />
     <Content Include="Picture\National University Laguna %28NU Laguna%29 logo.png" />
+    <Content Include="Picture\nu.png" />
     <Content Include="Picture\password.png" />
-    <Content Include="Picture\qrcode.png" />
-    <Content Include="Picture\sonny.png" />
-    <Content Include="Picture\spidey.png" />
     <Content Include="Picture\San Beda College Alabang %28SBCA%29 logo.png" />
-    <Content Include="Picture\tom.png" />
+    <Content Include="Picture\sbca.png" />
     <Content Include="Picture\University of Santo Tomas %28UST%29 logo.png" />
+    <Content Include="Picture\ust.png" />
     <Content Include="Picture\user.png" />
-    <Content Include="Picture\visa-logo.png" />
-    <Content Include="Picture\zen.png" />
     <Content Include="signup.aspx" />
+    <Content Include="universities.aspx" />
     <Content Include="Web.config" />
-    <Content Include="PrintableReceipt.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about us.aspx.cs">
@@ -117,40 +102,12 @@
     <Compile Include="about us.aspx.designer.cs">
       <DependentUpon>about us.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BookingConfirmation.aspx.cs">
-      <DependentUpon>BookingConfirmation.aspx</DependentUpon>
+    <Compile Include="FindRides.aspx.cs">
+      <DependentUpon>FindRides.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BookingConfirmation.aspx.designer.cs">
-      <DependentUpon>BookingConfirmation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BuyTickets.aspx.cs">
-      <DependentUpon>BuyTickets.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BuyTickets.aspx.designer.cs">
-      <DependentUpon>BuyTickets.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BuyTickets2.aspx.cs">
-      <DependentUpon>BuyTickets2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BuyTickets2.aspx.designer.cs">
-      <DependentUpon>BuyTickets2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CancelReservation.aspx.cs">
-      <DependentUpon>CancelReservation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CancelReservation.aspx.designer.cs">
-      <DependentUpon>CancelReservation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Checkout.aspx.cs">
-      <DependentUpon>Checkout.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Checkout.aspx.designer.cs">
-      <DependentUpon>Checkout.aspx</DependentUpon>
+    <Compile Include="FindRides.aspx.designer.cs">
+      <DependentUpon>FindRides.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact us.aspx.cs">
       <DependentUpon>Contact us.aspx</DependentUpon>
@@ -187,6 +144,13 @@
     <Compile Include="MyBookings.aspx.designer.cs">
       <DependentUpon>MyBookings.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Offer.aspx.cs">
+      <DependentUpon>Offer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Offer.aspx.designer.cs">
+      <DependentUpon>Offer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signup.aspx.cs">
       <DependentUpon>signup.aspx</DependentUpon>
@@ -195,12 +159,12 @@
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PrintableReceipt.aspx.cs">
-      <DependentUpon>PrintableReceipt.aspx</DependentUpon>
+    <Compile Include="universities.aspx.cs">
+      <DependentUpon>universities.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PrintableReceipt.aspx.designer.cs">
-      <DependentUpon>PrintableReceipt.aspx</DependentUpon>
+    <Compile Include="universities.aspx.designer.cs">
+      <DependentUpon>universities.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

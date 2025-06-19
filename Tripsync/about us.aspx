@@ -2,52 +2,63 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .about-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 32px 20px;
+            background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(21,101,192,0.10);
+            color: #fff;
         }
         .about-title {
             text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            color: #343a40;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .about-icon {
+            display: block;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
         .about-text {
-            font-size: 18px;
-            line-height: 1.6;
-            text-align: justify;
-            color: #495057;
+            font-size: 1.18rem;
+            line-height: 1.7;
+            text-align: center;
+            margin-bottom: 18px;
+            color: #e3f2fd;
+        }
+        .about-highlight {
+            font-weight: 600;
+            color: #fff176;
+        }
+        @media (max-width: 576px) {
+            .about-container { padding: 18px 6px; }
+            .about-title { font-size: 1.5rem; }
+            .about-text { font-size: 1rem; }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container mt-5">
+    <div class="container my-5">
         <div class="about-container">
-            <h2 class="about-title">About Us</h2>
+            <span class="about-icon">
+                <i class="fas fa-bus-alt"></i>
+            </span>
+            <h2 class="about-title">About Tripsync</h2>
             <p class="about-text">
-                <asp:Label ID="Label1" runat="server" ForeColor="Black" CssClass="lead" 
-                    Text="Tripsync was founded by a dynamic team of four passionate students from Mapúa Malayan Colleges Laguna: Kenneth Denzel Villas, Lorenzo Okol, Vincent Trayvilla, and Yuan Umali. Inspired by our love for cinema and technology, we embarked on a journey to revolutionize the movie ticketing experience.">
-                </asp:Label>
+                <span class="about-highlight">Tripsync</span> is a ride-booking app built to serve university students who need reliable transportation between campuses. Designed with the student lifestyle in mind, it offers a simple and efficient way to book rides for academic, social, or personal trips. By focusing on inter-university routes, TripSync fills a unique gap in traditional transportation services.
             </p>
             <p class="about-text">
-                <asp:Label ID="Label2" runat="server" ForeColor="Black" CssClass="lead" 
-                    Text="Our mission is to create a seamless, user-friendly, and efficient platform that allows moviegoers to book tickets effortlessly. With real-time updates, a smooth reservation system, and a commitment to customer satisfaction, Tripsync aims to make every cinema visit stress-free and enjoyable.">
-                </asp:Label>
-            </p>
+                The app connects students traveling in the same direction, promoting ride-sharing that is both cost-effective and eco-friendly. With features like verified student profiles, real-time tracking, and secure payment options, TripSync ensures that every ride is safe and convenient. It also helps reduce the stress of navigating public transport or expensive private alternatives.            </p>
             <p class="about-text">
-                <asp:Label ID="Label3" runat="server" ForeColor="Black" CssClass="lead" 
-                    Text="As students of technology and innovation, we believe in harnessing digital solutions to enhance everyday experiences. Through Tripsync, we strive to bridge the gap between movie lovers and their favorite films, ensuring that the joy of cinema remains just a click away.">
-                </asp:Label>
-            </p>
-            <p class="about-text text-center fw-bold">
-                <asp:Label ID="Label4" runat="server" ForeColor="Black" CssClass="lead" 
-                    Text="Join us in redefining movie ticket booking fast, easy, and reliable. Welcome to Tripsync, where the magic of movies meets the convenience of technology!">
-                </asp:Label>
+                TripSync builds a sense of community by encouraging connections among students from different universities. Whether you're attending a seminar, visiting friends, or going home for the weekend, the app makes planning and sharing rides simple. As it grows, TripSync aims to become the go-to platform for student mobility across campuses nationwide.            </p>
+            <p class="about-text">
+                <span class="about-highlight">Hop on. Sync up. Move smarter with Tripsync.</span>
             </p>
         </div>
     </div>

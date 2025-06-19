@@ -42,13 +42,22 @@ namespace Tripsync
         protected global::System.Web.UI.WebControls.HyperLink hlHome;
 
         /// <summary>
-        /// hlBuyTickets control.
+        /// liFindRides control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlBuyTickets;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liFindRides;
+
+        /// <summary>
+        /// hlFindRides control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlFindRides;
 
         /// <summary>
         /// hlMyBookings control.
@@ -60,13 +69,31 @@ namespace Tripsync
         protected global::System.Web.UI.WebControls.HyperLink hlMyBookings;
 
         /// <summary>
-        /// hlCancelReservation control.
+        /// liOffer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCancelReservation;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liOffer;
+
+        /// <summary>
+        /// hlOffer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlOffer;
+
+        /// <summary>
+        /// hlUniversities control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlUniversities;
 
         /// <summary>
         /// hlContact control.

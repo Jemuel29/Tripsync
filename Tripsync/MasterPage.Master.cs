@@ -22,10 +22,16 @@ namespace Tripsync
             {
                 lblUserRole.Text = "Role: " + Session["Role"].ToString();
                 lblUserRole.Visible = true;
+
+                string role = Session["Role"].ToString().ToLower();
+                liFindRides.Visible = (role != "driver");
+                liOffer.Visible = (role == "driver");   
             }
             else
             {
                 lblUserRole.Visible = false;
+                liFindRides.Visible = true; 
+                liOffer.Visible = false;   
             }
         }
 
@@ -72,7 +78,7 @@ namespace Tripsync
                 {
                     connection.Open();
 
-                    string query = "SELECT password, role FROM Login_TBL WHERE username = ?";
+                    string query = "SELECT UserId, password, role FROM Login_TBL WHERE username = ?";
                     using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("?", username);
@@ -83,11 +89,13 @@ namespace Tripsync
                             {
                                 string dbPassword = reader["password"].ToString();
                                 string dbRole = reader["role"].ToString();
+                                string dbUserId = reader["UserId"].ToString();
 
                                 if (dbPassword == password)
                                 {
                                     Session["Username"] = username;
-                                    Session["Role"] = dbRole; // <-- Set the user's role in session
+                                    Session["Role"] = dbRole;
+                                    Session["UserId"] = dbUserId; // <-- Set the user's role in session
                                     UpdateLoginStatus();
                                     Response.Redirect("Home.aspx");
                                 }
